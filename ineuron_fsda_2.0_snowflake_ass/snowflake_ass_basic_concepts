@@ -109,9 +109,7 @@ SELECT *,
 SELECT *,
        datediff('DAY',ORDER_DATE,SHIP_DATE) AS PROCESS_DAYS
        FROM GM_SALES_DATA_FINAL_COPY_DATA;
-       
-UPDATE GM_SALES_DATA_FINAL_COPY_DATA
-SET PROCESS_DAYS=datediff WHERE PROCESS_DAYS IS NULL;
+      
 
 --7.Create a new column called Rating and then based on the Process dates give rating like given below.
     --a. If process days less than or equal to 3days then rating should be 5
